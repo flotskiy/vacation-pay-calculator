@@ -26,7 +26,7 @@ class IndexPageControllerTests {
     void indexPageAccessTest() throws Exception {
         mockMvc.perform(get("/"))
                 .andDo(print())
-                .andExpect(content().string(containsString("Enter the duration")))
+                .andExpect(content().string(containsString("Enter duration")))
                 .andExpect(status().isOk());
     }
 }
