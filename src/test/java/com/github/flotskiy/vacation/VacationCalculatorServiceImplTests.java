@@ -46,13 +46,13 @@ class VacationCalculatorServiceImplTests {
 
     @Test
     void getVacationPaySuccessTest() {
-        VacationPayDto vacationPayDto = service.getVacationPay(avgSalary, numberOfDays);
+        VacationPayDto vacationPayDto = service.getVacationPay(avgSalary, numberOfDays, null);
         assertEquals(successResult, vacationPayDto.getResult());
     }
 
     @Test
     void getVacationPayFailTest() {
-        VacationPayDto vacationPayDto = service.getVacationPay(avgSalary, wrongNumberOfDays);
+        VacationPayDto vacationPayDto = service.getVacationPay(avgSalary, wrongNumberOfDays, null);
         assertEquals(wrongNumberOfDaysResult, vacationPayDto.getResult());
     }
 }

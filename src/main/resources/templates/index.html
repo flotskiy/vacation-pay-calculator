@@ -7,7 +7,8 @@
                 event.preventDefault();
                 const salary = document.getElementById('salary').value;
                 const duration = document.getElementById('duration').value;
-                const url = '/calculate?salary=' + salary + '&duration=' + duration;
+                const from = document.getElementById('from').value;
+                const url = '/calculate?salary=' + salary + '&duration=' + duration + (from.length === 0 ? '' : '&from=' + from);
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
@@ -19,11 +20,20 @@
     <body>
         <form onsubmit="submitData(event)">
             <label for="salary">Enter the average salary for the last year in rubles:</label>
-            <input type="text" id="salary" name="salary"><br><br>
+            <input type="text" id="salary" name="salary">
+            <br>
+            <br>
+            <label for="from">Enter start date:</label>
+            <input type="date" id="from" name="from">
+            <br>
+            <br>
             <label for="duration">Enter the duration of the vacation in days:</label>
-            <input type="text" id="duration" name="duration"><br><br>
+            <input type="text" id="duration" name="duration">
+            <br>
+            <br>
             <input type="submit" value="Calculate the amount of vacation pay">
         </form>
+        <br>
         <br>
         <div id="result"></div>
     </body>

@@ -26,7 +26,9 @@ public class VacationPayController {
 
     @GetMapping("/calculate")
     public ResponseEntity<VacationPayDto> getVacationPayValue(
-            @RequestParam("salary") String salary, @RequestParam("duration") String duration) {
-        return ResponseEntity.ok(vacationCalculatorService.getVacationPay(salary, duration));
+            @RequestParam("salary") String salary,
+            @RequestParam("duration") String duration,
+            @RequestParam(value = "from", required = false) String from) {
+        return ResponseEntity.ok(vacationCalculatorService.getVacationPay(salary, duration, from));
     }
 }

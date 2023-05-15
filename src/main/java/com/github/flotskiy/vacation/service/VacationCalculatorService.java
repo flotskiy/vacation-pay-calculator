@@ -4,5 +4,5 @@ import com.github.flotskiy.vacation.dto.VacationPayDto;
 
 public interface VacationCalculatorService {
 
-    VacationPayDto getVacationPay(String averageAnnualSalary, String vacationDuration);
+    VacationPayDto getVacationPay(String averageAnnualSalary, String vacationDuration, String from);
 }

@@ -10,3 +10,4 @@ fail:
   parse: "You entered incorrect numbers"
   general: "Could not calculate the amount of vacation pay! Try again or let us know about the problem: fix@problem.net"
   log: "Vacation pay calculation FAILED: {0}"
+holidays: "Holidays excluded from vacation: {0}"
