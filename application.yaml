@@ -1,0 +1,12 @@
+average-month-duration: 29.3
+tax-rate: 0.13
+success:
+    message: "The amount of vacation pay is: "
+    log: "Vacation pay for avg salary {} and vacation duration {} is calculated: {}"
+fail:
+  number:
+    exception: "Entered number is negative or equals to zero"
+    message: "The entered number cannot be less than one"
+  parse: "You entered incorrect numbers"
+  general: "Could not calculate the amount of vacation pay! Try again or let us know about the problem: fix@problem.net"
+  log: "Vacation pay calculation FAILED: {0}"
